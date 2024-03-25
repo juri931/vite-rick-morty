@@ -15,8 +15,8 @@ export default {
       <img class="card-img-top" :src="image" :alt="name" />
       <div class="card-body">
         <h5 class="card-title">{{ name }}</h5>
-        <h6 class="card-title">{{ status }}</h6>
-        <p class="text-center">{{ species }}</p>
+        <h6 class="card-title">Status: {{ status }}</h6>
+        <p class="text-center">Species: {{ species }}</p>
       </div>
     </div>
   </div>

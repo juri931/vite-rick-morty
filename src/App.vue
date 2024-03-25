@@ -18,7 +18,6 @@ export default {
       axios
         .get(this.store.apiUrl, {
           params: {
-            num: 12,
             offset: 0,
           },
         })
