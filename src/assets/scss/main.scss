@@ -1,0 +1,22 @@
+body {
+  background-image: url("/public/img/wallpapersden.com_k-rick-and-morty-2020_3840x2160.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// HEADER
+.main-title {
+  text-align: center;
+  font-weight: 800;
+  color: rgb(212, 177, 131);
+  text-shadow: 2px 2px 2px black;
+}
+// HEADER END
+
+.card {
+  border-radius: 40px;
+  img {
+    width: 100%;
+  }
+}

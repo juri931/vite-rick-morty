@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div>{{ store.mainTitle }}</div>
+  <h1 class="main-title my-4">{{ store.mainTitle }}</h1>
 </template>
 
 <style lang="scss" scoped></style>
