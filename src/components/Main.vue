@@ -17,7 +17,7 @@ export default {
   <div class="container text-center my-5">
     <div class="row row-cols-3">
       <Card
-        v-for="card in this.store.cardList"
+        v-for="card in this.store.cardsList"
         :key="card.id"
         :name="card.name"
         :status="card.status"
