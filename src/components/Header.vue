@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div>HEADER</div>
+  <div>{{ store.mainTitle }}</div>
 </template>
 
 <style lang="scss" scoped></style>

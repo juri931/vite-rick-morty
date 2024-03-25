@@ -14,8 +14,17 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <Card />
+  <div class="container text-center my-5">
+    <div class="row row-cols-3">
+      <Card
+        v-for="card in this.store.cardList"
+        :key="card.id"
+        :name="card.name"
+        :status="card.status"
+        :species="card.species"
+        :image="card.image"
+      />
+    </div>
   </div>
 </template>
 
