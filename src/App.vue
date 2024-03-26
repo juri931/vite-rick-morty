@@ -3,10 +3,12 @@ import axios from "axios";
 import { store } from "./data/store";
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Pagination from "./components/partials/Pagination.vue";
 export default {
   components: {
     Header,
     Main,
+    Pagination,
   },
   data() {
     return {
@@ -39,6 +41,7 @@ export default {
 <template>
   <Header />
   <Main />
+  <Pagination />
 </template>
 
 <style lang="scss">

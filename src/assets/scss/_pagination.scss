@@ -1,0 +1,51 @@
+.pagination {
+  a:focus {
+    box-shadow: unset !important;
+  }
+
+  .page-item {
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.active {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+  }
+
+  .page-link {
+    color: #007bff;
+    border-color: #007bff;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: none;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+
+    &.active {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    &.active:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+      color: #fff;
+    }
+  }
+
+  .page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}

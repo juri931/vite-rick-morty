@@ -1,21 +1,28 @@
 <script>
 import Card from "./partials/Card.vue";
 import { store } from "../data/store";
+import Pagination from "./partials/Pagination.vue";
 export default {
   components: {
     Card,
+    Pagination,
   },
   data() {
     return {
       store,
       searchName: "",
+      currentPage: 1,
+      pageSize: 12,
     };
   },
   computed: {
     filteredCards() {
-      return this.store.cardsList.filter((card) =>
-        card.name.toLowerCase().includes(this.searchName.toLowerCase())
-      );
+      const start = (this.currentPage - 1) * this.pageSize;
+      return this.store.cardsList
+        .slice(start, start + this.pageSize)
+        .filter((card) =>
+          card.name.toLowerCase().includes(this.searchName.toLowerCase())
+        );
     },
   },
 };
@@ -29,8 +36,6 @@ export default {
       class="form-control"
       placeholder="Search name"
     />
-    <button class="btn btn-primary">Search</button>
-    <div class="chevron">MENU</div>
   </div>
 
   <div class="container text-center my-5">
