@@ -16,7 +16,7 @@ export default {
 <template>
   <div class="bar">
     <input type="text" class="form-control" placeholder="Search name" />
-    <button>Search</button>
+    <button class="btn btn-primary">Search</button>
     <div class="chevron">MENU</div>
   </div>
 
