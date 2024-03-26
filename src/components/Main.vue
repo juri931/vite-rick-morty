@@ -14,6 +14,12 @@ export default {
 </script>
 
 <template>
+  <div class="bar">
+    <input type="text" class="form-control" placeholder="Search name" />
+    <button>Search</button>
+    <div class="chevron">MENU</div>
+  </div>
+
   <div class="container text-center my-5">
     <div class="row row-cols-3">
       <Card
