@@ -1,11 +1,13 @@
 <script>
 import axios from "axios";
+import Loader from "./components/partials/Loader.vue";
 import { store } from "./data/store";
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Pagination from "./components/partials/Pagination.vue";
 export default {
   components: {
+    Loader,
     Header,
     Main,
     Pagination,
@@ -20,15 +22,20 @@ export default {
       axios
         .get(this.store.apiUrl, {
           params: {
-            offset: 0,
+            name: "",
+            status: "",
           },
         })
         .then((result) => {
-          console.log(result.data.results);
-          this.store.cardsList = result.data.results;
+          store.cardsList = result.data.results;
+          store.cardsList.forEach((card) => {
+            if (!store.statusList.includes(card.status)) {
+              store.statusList.push(card.status);
+            }
+          });
         })
         .catch((error) => {
-          console.log(error);
+          console.log("Error", error);
         });
     },
   },
@@ -40,6 +47,7 @@ export default {
 
 <template>
   <Header />
+  <Loader />
   <Main />
   <Pagination />
 </template>
