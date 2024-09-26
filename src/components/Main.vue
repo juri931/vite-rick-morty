@@ -5,14 +5,14 @@ import Pagination from "./partials/Pagination.vue";
 export default {
   components: {
     Card,
-    Pagination,
+    Pagination
   },
   data() {
     return {
       store,
       searchName: "",
       currentPage: 1,
-      pageSize: 12,
+      pageSize: 18
     };
   },
   computed: {
@@ -23,8 +23,8 @@ export default {
         .filter((card) =>
           card.name.toLowerCase().includes(this.searchName.toLowerCase())
         );
-    },
-  },
+    }
+  }
 };
 </script>
 

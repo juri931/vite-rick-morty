@@ -1,4 +1,7 @@
-## Vite Rick & Morty
+## Rick & Morty
 
-Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout del tipo di quello visto in classe.
-Al caricamento della pagina, effettuate una chiama ajax all’API di Rick & Morty: https://rickandmortyapi.com/api/character e con i dati restituiti, stampate una card per ogni carta.
+Semplice progetto di chiamata API per i personaggi della serie "Rick & Morty"
+con ricerca dinamica e paginazione. Progetto iniziato con Vite, logica
+effettuata utilizzando Vue.js e SASS per la grafica.
+
+![alt text](<Registrazione 2024-09-26 105611.gif>)
