@@ -1,20 +1,18 @@
 <script>
 import axios from "axios";
-import Loader from "./components/partials/Loader.vue";
 import { store } from "./data/store";
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
 import Pagination from "./components/partials/Pagination.vue";
 export default {
   components: {
-    Loader,
     Header,
     Main,
-    Pagination,
+    Pagination
   },
   data() {
     return {
-      store,
+      store
     };
   },
   methods: {
@@ -23,8 +21,8 @@ export default {
         .get(this.store.apiUrl, {
           params: {
             name: "",
-            status: "",
-          },
+            status: ""
+          }
         })
         .then((result) => {
           store.cardsList = result.data.results;
@@ -37,17 +35,16 @@ export default {
         .catch((error) => {
           console.log("Error", error);
         });
-    },
+    }
   },
   mounted() {
     this.getApi();
-  },
+  }
 };
 </script>
 
 <template>
   <Header />
-  <Loader />
   <Main />
   <Pagination />
 </template>
